@@ -1,0 +1,120 @@
+/* --- Paleta de Cores "Noite Estrelada" --- */
+:root {
+    --azul-noite-fundo: #0b192f;
+    --azul-noite-fundo-grad: #0d1e3a; /* Gradiente sutil */
+    --azul-noite-card: #162b4d;
+    --texto-claro: #E6F1FF;
+    --dourado-estrela: #FFD700;
+    --dourado-hover: #F0C400;
+}
+
+body {
+    background-color: var(--azul-noite-fundo);
+    /* INÍCIO DA MUDANÇA: Adicionando gradiente sutil ao fundo */
+    background-image: linear-gradient(180deg, var(--azul-noite-fundo-grad) 0%, var(--azul-noite-fundo) 100%);
+    /* FIM DA MUDANÇA */
+    color: var(--texto-claro);
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* --- Título com Ícone SVG --- */
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espaço entre o ícone e o texto */
+    font-family: 'Playfair Display', serif;
+    color: var(--texto-claro);
+    text-align: center;
+}
+header h1 svg {
+    fill: var(--dourado-estrela); /* Pinta o ícone de dourado */
+}
+
+/* --- Cards de Livros com Animação --- */
+.livro-card {
+    background-color: var(--azul-noite-card);
+    border-radius: 8px;
+    padding: 15px;
+    width: 210px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* INÍCIO DA MUDANÇA: Animação de entrada */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 0.5s ease-out forwards;
+    /* FIM DA MUDANÇA */
+}
+
+/* INÍCIO DA MUDANÇA: Keyframes da animação */
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* FIM DA MUDANÇA */
+
+.livro-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+}
+
+/* --- Notificações Toastify --- */
+.toastify {
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--dourado-estrela);
+    opacity: 0.95;
+}
+/* Estilos para o botão de fechar do Toast */
+.toastify-close {
+    font-size: 24px;
+    opacity: 0.8;
+}
+.toastify-close:hover {
+    opacity: 1;
+}
+
+/* Botão de confirmação dentro da notificação */
+.toast-button {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.toast-button.confirm { background-color: #c94b4b; }
+.toast-button.cancel { background-color: #495057; }
+
+
+/* (Resto do CSS - Sem grandes mudanças, apenas ajustes para o tema escuro) */
+main { max-width: 1200px; margin: 0 auto; }
+hr { margin: 40px 0; border: none; border-top: 1px solid var(--dourado-estrela); opacity: 0.3; }
+section h2 { text-align: left; font-family: 'Playfair Display', serif; color: var(--texto-claro); border-bottom: 1px solid var(--dourado-estrela); padding-bottom: 10px; margin-bottom: 20px; }
+.form-busca { display: flex; gap: 10px; margin-bottom: 30px; }
+#input-busca { flex-grow: 1; padding: 12px 15px; border: 1px solid var(--azul-noite-card); border-radius: 8px; font-size: 1em; background-color: var(--azul-noite-card); color: var(--texto-claro); transition: border-color 0.3s, box-shadow 0.3s; }
+#input-busca:focus { outline: none; border-color: var(--dourado-estrela); box-shadow: 0 0 8px rgba(255, 215, 0, 0.5); }
+button { background-color: transparent; color: var(--dourado-estrela); border: 2px solid var(--dourado-estrela); padding: 12px 20px; border-radius: 8px; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s, color 0.3s, transform 0.2s; }
+button:hover { background-color: var(--dourado-estrela); color: var(--azul-noite-fundo); transform: scale(1.02); }
+.container-livros { display: flex; flex-wrap: wrap; gap: 25px; justify-content: flex-start; }
+.livro-card img { max-width: 150px; height: 220px; object-fit: cover; margin: 0 auto 15px auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+.livro-card h3 { font-family: 'Playfair Display', serif; font-size: 1.1em; margin: 0 0 5px 0; color: var(--texto-claro); }
+.livro-card p { font-size: 0.9em; color: var(--texto-claro); opacity: 0.8; margin: 0 0 15px 0; line-height: 1.4; }
+.livro-card button { width: 100%; margin-top: 5px; padding: 10px; font-size: 0.8em; }
+#spinner-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(11, 25, 47, 0.8); display: flex; justify-content: center; align-items: center; z-index: 1000; }
+.spinner { width: 60px; height: 60px; border: 5px solid rgba(230, 241, 255, 0.3); border-top-color: var(--dourado-estrela); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.hidden { display: none !important; }
+.toast-success { background: linear-gradient(to right, #1a936f, var(--azul-noite-card)); }
+.toast-error { background: linear-gradient(to right, #c94b4b, var(--azul-noite-card)); }
+.toast-confirmation { background: linear-gradient(to right, #495057, var(--azul-noite-card)); }

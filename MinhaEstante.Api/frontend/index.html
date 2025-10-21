@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Estante Virtual</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="spinner-container" class="hidden">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <h1>
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388 1.175.885.652 1.498 1.507 1.498 2.599v7.811c0 .424-.343.768-.768.768h-1.063c-.424 0-.768-.344-.768-.768V4.287c0-.629-.356-1.159-.756-1.503-.4-.345-1.04-.57-1.748-.622-1.424-.108-2.52.2-3.122.752V14.5a.5.5 0 0 0 .5.5h1.5a.5.5 0 0 0 0-1H8.5V2.687z"/>
+                <path d="M7.5 14.5a.5.5 0 0 0-.5-.5h-1.5a.5.5 0 0 0 0 1H7.5V14.5z"/>
+                <path d="M.25 14.5a.25.25 0 0 1-.25-.25V.5a.25.25 0 0 1 .25-.25H7.5a.25.25 0 0 1 .25.25v13.75a.25.25 0 0 1-.25.25H.25zM1 1.732v11.536H7V1.732H1z"/>
+            </svg>
+            Minha Estante Virtual
+        </h1>
+        </header>
+
+    <main>
+        <section class="secao-busca">
+            <h2>Buscar Novos Livros</h2>
+            <div class="form-busca">
+                <input type="text" id="input-busca" placeholder="Digite o nome de um livro ou autor...">
+                <button id="btn-busca">Buscar</button>
+            </div>
+            <div id="container-resultados-busca" class="container-livros"></div>
+        </section>
+
+        <hr>
+
+        <section class="secao-estante">
+            <h2>Minha Estante</h2>
+            <div id="container-minha-estante" class="container-livros"></div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
