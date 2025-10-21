@@ -4,7 +4,8 @@ Projeto acadêmico de uma aplicação web full-stack para gerenciamento de uma e
 
 O projeto foi desenvolvido com foco em um backend robusto em C# .NET e um frontend reativo em JavaScript puro, com uma interface de usuário moderna no estilo "dark mode".
 
-*(Dica: Tire um print da sua aplicação funcionando, envie para a pasta `frontend` do seu projeto e mude o link abaixo para `./frontend/nome_da_imagem.png`)*
+<img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/5f23d52f-3432-4ee8-84cf-8193f27494fe" />
+
 ---
 
 ## ✨ Funcionalidades Principais
@@ -71,4 +72,4 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 ## 👨‍💻 Autor
 
-* **João Pinheiro** - [Seu GitHub] (https://github.com/SEU_USUARIO)
+* **João Pinheiro** - [Seu GitHub] (https://github.com/joaofrancop)
