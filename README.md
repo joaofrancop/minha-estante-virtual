@@ -72,6 +72,6 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 ## 👨‍💻 Autor
 
-* **João Pinheiro** - [Seu GitHub] (https://github.com/joaofrancop)
+* **João Pinheiro**
 * **Vittor**
 * **Gabriel**
